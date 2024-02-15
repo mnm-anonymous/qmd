@@ -1,0 +1,77 @@
+# install with `PIP_NO_DEPS=1 conda env create`
+name: metric_distillation
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pyopengl=3.1.6
+  - pyglfw=2.6.5
+  - tqdm=4.66.1
+  - libmujoco=2.3.7
+  - dill=0.3.7
+  - dm-env=1.6
+  - cython<3
+  - einops=0.7.0
+  - promise=2.3
+  - dm-haiku=0.0.6
+  - pytorch=2.1.2
+  - omegaconf=2.3.0
+  - labmaze=1.0.6
+  - fasteners=0.17.3
+  - matplotlib=3.8.2
+  - wandb=0.16.2
+  - gin-config=0.5.0
+  - scikit-learn=1.4.0
+  - jax==0.3.13
+  - numpy==1.22.4
+  - cudatoolkit==11.8.0
+  - cudnn=8.2
+  - setuptools==65.5.0
+  - pip=21.0
+  - pandas=2.2
+  - tensorboard=2.8
+  - google-auth==2.7.0
+  - lockfile=0.12
+  - imageio=2.19
+  - h5py=3.10.0
+  - pip:
+    - chex==0.1.3
+    - toolz==0.11.2
+    - mujoco==2.2.0
+    - mujoco-py==2.0.2.5
+    - mjrl @ git+https://github.com/aravindr93/mjrl@3871d93763d3b49c4741e6daeaebbc605fe140dc
+    - gym==0.19.0
+    - dm-launchpad[tensorflow]==0.5.0
+    - dm-acme==0.4.0
+    - dm-reverb==0.7.0
+    - dm-sonnet==2.0.0
+    - dm-tree==0.1.7
+    - pybullet==3.2.5
+    - optax==0.1.2
+    - tensorflow-datasets==4.4.0
+    - tensorflow-estimator==2.8.0
+    - tensorflow-probability==0.15.0
+    - tensorflow==2.8.2
+    - wrapt==1.14.1
+    - decorator==5.1.1
+    - d4rl @ git+https://github.com/rail-berkeley/d4rl@d842aa194b416e564e54b0730d9f934e3e32f854 
+    - gast==0.5.3
+    - keras==2.8.0
+    - protobuf==3.19.1
+    - mock==4.0.3
+    - portpicker==1.5.2
+    - cachetools==5.3.2
+    - pillow==7.2
+    - astunparse==1.6.3
+    - termcolor==1.1.0
+    - cloudpickle==1.6.0
+    - Keras-Preprocessing==1.1.2
+    - flatbuffers==2.0
+    - -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html 
+    - jaxlib==0.3.10+cuda11.cudnn82
+variables:
+  MUJOCO_GL: glfw
+  PYOPENGL_PLATFORM: glfw
+  TF_FORCE_GPU_ALLOW_GROWTH: "true"
+  XLA_PYTHON_CLIENT_PREALLOCATE: "false"
